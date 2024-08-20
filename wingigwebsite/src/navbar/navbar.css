@@ -1,0 +1,68 @@
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+}
+
+.logo {
+  flex: 0 0 10%;
+  margin: 0;
+}
+
+.logo img {
+  width: 104px;
+  height: auto;
+  /* padding: 8px; */
+  margin: 10px 14px;
+}
+
+.navbar {
+  left: 10%;
+  width: 90%;
+
+  height: 70px;
+  background-color: rgb(25, 26, 35);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+  /* background: linear-gradient(to right, rgb(164, 172, 212), rgb(25, 26, 35)); */
+  overflow: hidden;
+  position: fixed;
+  z-index: 1000;
+}
+
+.navbarUl {
+  margin: 2px 15px;
+  list-style-type: none;
+  font-weight: 500;
+}
+
+.navbarLi {
+  float: right;
+}
+
+.navbarLi:hover {
+  color: rgb(70, 149, 206);
+}
+
+.navbarLi {
+  display: block;
+  color: rgb(251, 247, 247);
+  text-align: center;
+  padding: 25px 40px;
+  text-decoration: none;
+  margin: 0px 1px;
+}
+
+.navbarLi a:hover {
+  background-color: #844646;
+}
+
+.navbarLi i {
+  margin-right: 8px;
+}

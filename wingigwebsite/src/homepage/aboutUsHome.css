@@ -1,0 +1,49 @@
+.homeAbout {
+  margin: 35px 65px;
+
+  background-image: url("aboutusimg.png");
+  background-size: cover;
+  height: 500px;
+  display: flex;
+}
+.homeAboutRight {
+  width: 50%;
+
+  padding-top: 70px;
+}
+.homeAboutRight iframe {
+  padding-right: 15px;
+  width: 500px;
+}
+
+.homeAboutLeft {
+  width: 50%;
+  padding-top: 45px;
+  padding-left: 30px;
+  padding-right: 95px;
+
+  color: rgb(255, 255, 255);
+}
+
+.homeAboutLeft span {
+  color: #136cca;
+}
+.homeAboutLeft p {
+  word-spacing: 4px;
+  line-height: 22px;
+}
+.homeAboutLeft button {
+  width: 120px;
+  height: 35px;
+  color: white;
+  background-color: rgb(109, 117, 142);
+  border: 0px;
+  border-radius: 2px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(29, 29, 29, 0.3);
+}
+
+.homeAboutLeft button:hover {
+  background-color: #136cca;
+  transform: translateY(-3px);
+}
