@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./reg.css";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
-const Register = () => {
+const RegisterPage = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -11,9 +13,9 @@ const Register = () => {
     phoneNumber: "",
   });
   const [errors, setErrors] = useState({});
+  const navigate = useNavigate()
   const validate = (name, value) => {
     let error = "";
-
     switch (name) {
       case "name":
         if (!value) error = "Full Name is required";
@@ -48,14 +50,22 @@ const Register = () => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
 
-    // Remove error when the user starts typing
+
     if (errors[name]) {
       setErrors((prevErrors) => ({ ...prevErrors, [name]: "" }));
     }
   };
+
+  const { name, email, password, confirmPassword, phoneNumber } = formData;
   const handleSubmit = (e) => {
     e.preventDefault();
     const newErrors = {};
+    axios.post("http://localhost:3003/register", { name, email, password, confirmPassword, phoneNumber })
+      .then(result => {
+        console.log(result);
+        navigate('/login/Login');
+      })
+      .catch(err => console.log(err))
 
     Object.keys(formData).forEach((key) => {
       const error = validate(key, formData[key]);
@@ -67,10 +77,13 @@ const Register = () => {
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
-      // Proceed with form submission (e.g., send data to the server)
+
       console.log("Form data is valid:", formData);
     }
   };
+
+
+
 
   return (
     <div id="section">
@@ -82,7 +95,7 @@ const Register = () => {
         </div>
         <div id="Two">
           <p>
-            Already Registered? <Link to="/Login">Login</Link>here
+            Already Registered? <Link to="/login/Login">Login</Link>here
           </p>
         </div>
       </div>
@@ -113,8 +126,8 @@ const Register = () => {
                 <h4>Don't just get Job, WIN IT.</h4>
               </div>
             </div>
-            {/* <div className="choices"> */}
-            <form id="content">
+
+            <form id="content" onSubmit={handleSubmit}>
               <div id="data">
                 <h5>
                   Full Name<span>*</span>
@@ -198,13 +211,13 @@ const Register = () => {
                 )}
               </div>
 
-              <div className="btn">
+              <div className="regbtn">
                 <button type="submit">Register Now</button>
               </div>
             </form>
-            {/* </div> */}
+
             <div className="another-option">
-              <span className="line"> Or </span>
+              <span className="lineOr"> Or </span>
               <div id="set">
                 <div className="btn_last">
                   <div id="logo_img">
@@ -221,26 +234,9 @@ const Register = () => {
           </div>
         </div>
       </div>
-      <footer className="reg-footer">
-        <div>
-          <ol className="list_unstyle">
-            <li>
-              <Link to="#">Home</Link>
-              <hr />
-            </li>
-            <li>
-              <Link to="#">About Us</Link>
-              <hr />
-            </li>
-            <li>
-              <Link to="#">Contact Us</Link>
-              <hr />
-            </li>
-          </ol>
-        </div>
-      </footer>
+
     </div>
   );
 };
 
-export default Register;
+export default RegisterPage;

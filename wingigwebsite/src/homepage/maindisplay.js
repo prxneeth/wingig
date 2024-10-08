@@ -1,9 +1,11 @@
 import React from "react";
 import "./maindisplay.css";
+import MiniNav from "../navbar/mininav";
 
 const MainDisplay = () => {
   return (
     <div>
+      <MiniNav />
       <div className="maindisplay">
         <div className="sections">
           <div className="leftSection">

@@ -6,7 +6,7 @@ const Footer = () => {
     <div>
       <div className="homeEnd">
         <div className="end1">
-          <img src="WinGigLogo.png" />
+          <img src="wingigWhite.png" />
           <p>
             WinGig was founded in 2018 <br /> IN Hyderabad, India <br /> It is a
             unique Assessement
@@ -32,27 +32,30 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <h2>GALLERY</h2>
-          <div className="end-gallery">
+          <div className="end4">      <h2>GALLERY</h2>    <div className="end-gallery">
+
+
+
             <div className="gallery-item">
-              <img src="logo512.png" alt="Image 1" />
+              <img src="logo52.png" alt="Image 1" />
             </div>
             <div className="gallery-item">
-              <img src="logo512.png" alt="Image 2" />
+              <img src="logo52.png" alt="Image 2" />
             </div>
             <div className="gallery-item">
-              <img src="logo512.png" alt="Image 3" />
+              <img src="logo52.png" alt="Image 3" />
             </div>
             <div className="gallery-item">
-              <img src="logo512.png" alt="Image 4" />
+              <img src="logo52.png" alt="Image 4" />
             </div>
             <div className="gallery-item">
-              <img src="logo512.png" alt="Image 5" />
+              <img src="logo52.png" alt="Image 5" />
             </div>
             <div className="gallery-item">
-              <img src="logo512.png" alt="Image 6" />
+              <img src="logo52.png" alt="Image 6" />
             </div>
-          </div>
+          </div></div>
+
         </div>
       </div>
       <div className="homeFooter">

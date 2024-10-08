@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import "./Login.css";
-import { Link } from "react-router-dom";
-// import applelogo from "./applelodo.png";
-// import googlelogo from "./googlelodo.png";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+
 import loginregpic from "./log_reg.png";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({ email: "", password: "" });
+  const navigate = useNavigate()
 
   const validateEmail = (email) => {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -16,30 +17,17 @@ const LoginPage = () => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    let emailError = "";
-    let passwordError = "";
+    e.preventDefault()
+    axios.post("http://localhost:3003/login/login", { email, password })
+      .then(result => {
+        console.log(result)
+        if (result.data === "success") {
+          navigate("/contactpage/contactpage")
+        }
+      })
+      .catch(err => console.log(err))
 
-    if (!email) {
-      emailError = " * Email is required.";
-    } else if (!validateEmail(email)) {
-      emailError = " * Invalid email format.";
-    }
-
-    if (!password) {
-      passwordError = " * Password is required.";
-    } else if (password.length < 6) {
-      passwordError = " * Password must be at least 6 characters.";
-    }
-
-    if (emailError || passwordError) {
-      setErrors({ email: emailError, password: passwordError });
-    } else {
-      setErrors({ email: "", password: "" });
-      // Proceed with form submission (e.g., send data to the server)
-      console.log("Form submitted:", { email, password });
-    }
-  };
+  }
 
   return (
     <div className="main">

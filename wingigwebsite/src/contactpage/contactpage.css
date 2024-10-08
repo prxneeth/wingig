@@ -31,10 +31,11 @@
 .contactHeader span {
   color: rgb(68, 187, 234);
 }
+
 .contactDetails {
   display: flex;
   width: 100%;
-  height: 800px;
+  /* height: 800px; */
 }
 
 .contactDetailsLeft {
@@ -46,7 +47,6 @@
 }
 .contactDetailsRight {
   width: 50%;
-  /* background-color: green; */
 }
 
 .contactPageMainText h1 {
@@ -67,24 +67,24 @@
   grid-template-columns: repeat(3, 1fr);
   /* display: flex; */
   gap: 40px;
-  width: 500px;
-  height: 200px;
+  /* border: 1px solid black; */
+  width: 550px;
+  height: 250px;
 }
 
 .contactPageAddrDetails {
   /* background-color: rgb(107, 107, 214); */
   color: rgb(29, 49, 64);
-  gap: 3px;
 }
 .contactPageAddrDetails img {
-  width: 50px;
+  width: 40px;
   margin: 40px 40px;
   /* padding: 30px; */
 }
 
 .contactPageSendMsg {
   padding-top: 20px;
-  margin-top: 50px;
+  /* margin-top: 50px; */
   /* background-color: rgb(188, 188, 226); */
 }
 .contactPageSendMsg hr {
@@ -102,10 +102,10 @@
 .contactPageSendMsg input {
   width: 240px;
   height: 30px;
-  background-color: rgb(29, 49, 64);
+  background-color: #a0aeb9;
   border: none;
   border-radius: 5px;
-  color: white;
+  color: black;
   margin-right: 25px;
   margin-left: 0px;
   text-align: center;
@@ -117,10 +117,11 @@
 .contactPageSendMsgInput textarea {
   margin-top: 15px;
   border-radius: 5px;
-  background-color: rgb(29, 49, 64);
+  background-color: #a0aeb9;
   width: 515px;
   height: 150px;
-  color: white;
+  padding: 10px;
+  color: black;
 }
 
 .contactPageSendMsg textarea::placeholder {
@@ -135,4 +136,57 @@
   width: 100px;
   height: 30px;
   border: none;
+}
+
+.contactPageSendMsgInput button:hover {
+  background-color: rgb(38, 88, 112);
+}
+
+.contactMap {
+  width: 640px;
+  height: 800px;
+}
+@media (max-width: 768px) {
+  .contactHeader {
+    background-image: none;
+    background-color: black;
+  }
+  .contactDetails {
+    display: inline;
+  }
+  .contactDetailsLeft {
+    width: 100%;
+  }
+  .contactDetailsRight {
+    width: 100%;
+  }
+  .contactPageAddr {
+    width: 100%;
+    display: inline;
+    text-align: center;
+  }
+
+  .contactPageAddrDetails {
+    display: inline;
+  }
+  .contactPageAddrDetails img {
+    margin-left: 180px;
+  }
+  .contactPageSendMsg input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .contactPageSendMsgInput textarea {
+    width: 100%;
+  }
+  .contactPageSendMsgInput button {
+    margin: 10px 150px;
+  }
+
+  .contactDetailsRight {
+    width: 100%;
+  }
+  .contactMap {
+    width: 100%;
+  }
 }

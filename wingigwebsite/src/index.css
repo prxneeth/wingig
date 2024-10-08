@@ -1,0 +1,44 @@
+@font-face {
+  font-family: "Degular Medium";
+  src: url("./assets/fonts/DegularText-Medium.otf") format("opentype");
+  font-weight: medium;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Degular Regular";
+  src: url("./assets/fonts/DegularText-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Degular Thin";
+  src: url("./assets/fonts/DegularText-Thin.otf") format("opentype");
+  font-weight: thin;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Degular ThinItalic";
+  src: url("./assets/fonts/DegularText-ThinItalic.otf") format("opentype");
+  font-weight: thin;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Degular Bold";
+  src: url("./assets/fonts/DegularText-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+body {
+  font-family: "Degular Thin";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* background-color: black;
+  color: white; */
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

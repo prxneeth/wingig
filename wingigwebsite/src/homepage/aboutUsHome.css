@@ -1,37 +1,42 @@
 .homeAbout {
   margin: 35px 65px;
-
   background-image: url("aboutusimg.png");
   background-size: cover;
-  height: 500px;
+  height: auto;
+  min-height: 500px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-.homeAboutRight {
-  width: 50%;
 
-  padding-top: 70px;
+.homeAboutRight,
+.homeAboutLeft {
+  width: 100%;
+  padding: 20px;
 }
+
 .homeAboutRight iframe {
-  padding-right: 15px;
-  width: 500px;
+  width: 100%;
+  max-width: 460px;
+  height: auto;
 }
 
 .homeAboutLeft {
-  width: 50%;
-  padding-top: 45px;
-  padding-left: 30px;
-  padding-right: 95px;
-
-  color: rgb(255, 255, 255);
+  padding-top: 20px;
+  color: black;
+  text-align: center;
 }
 
-.homeAboutLeft span {
-  color: #136cca;
+.homeAboutLeft h1 {
+  font-size: 24px;
 }
+
 .homeAboutLeft p {
   word-spacing: 4px;
   line-height: 22px;
+  font-size: 16px;
 }
+
 .homeAboutLeft button {
   width: 120px;
   height: 35px;
@@ -41,9 +46,57 @@
   border-radius: 2px;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
   box-shadow: 0 4px 8px rgba(29, 29, 29, 0.3);
+  margin-top: 20px;
 }
 
 .homeAboutLeft button:hover {
   background-color: #136cca;
   transform: translateY(-3px);
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+  .homeAbout {
+    margin: 35px 40px;
+  }
+
+  .homeAboutRight,
+  .homeAboutLeft {
+    width: 50%;
+    padding: 45px 30px;
+  }
+
+  .homeAboutLeft {
+    text-align: left;
+  }
+
+  .homeAboutLeft h1 {
+    font-size: 32px;
+  }
+
+  .homeAboutLeft p {
+    font-size: 18px;
+  }
+
+  .homeAboutRight iframe {
+    max-width: 500px;
+    height: 355px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .homeAbout {
+    margin: 35px 65px;
+  }
+
+  .homeAboutLeft {
+    padding-top: 45px;
+    padding-left: 30px;
+    padding-right: 95px;
+    color: white;
+  }
+
+  .homeAboutRight {
+    padding-top: 70px;
+  }
 }

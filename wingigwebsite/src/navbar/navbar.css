@@ -1,5 +1,5 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
-
+/*
 * {
   margin: 0;
   padding: 0;
@@ -12,25 +12,35 @@
 }
 
 .logo {
-  flex: 0 0 10%;
+  flex: 0 0 15%;
   margin: 0;
+
+  border: 1px solid rgb(202, 29, 29);
+  box-sizing: border-box;
 }
 
 .logo img {
   width: 104px;
   height: auto;
-  /* padding: 8px; */
+
   margin: 10px 14px;
 }
 
+.navDiv {
+  flex: 0 0 90%;
+ 
+  width: 85%;
+  border: 1px solid rgb(202, 29, 29);
+  box-sizing: border-box;
+}
 .navbar {
-  left: 10%;
-  width: 90%;
+ 
 
   height: 70px;
+
   background-color: rgb(25, 26, 35);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
-  /* background: linear-gradient(to right, rgb(164, 172, 212), rgb(25, 26, 35)); */
+ 
   overflow: hidden;
   position: fixed;
   z-index: 1000;
@@ -65,4 +75,213 @@
 
 .navbarLi i {
   margin-right: 8px;
+}
+*/
+/*
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.logo {
+  flex: 0 0 15%;
+}
+.logo img {
+  width: 60%;
+  transform: translateX(20px) translateY(10px);
+}
+.navDiv {
+  
+  width: 85%;
+}
+
+.navbar {
+  background-color: rgb(22, 50, 60);
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1000;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+}
+
+.navbarUl {
+  list-style: none;
+  display: flex;
+ 
+}
+
+.navbarLi {
+
+  text-align: center;
+  color: rgb(251, 247, 247);
+  display: flex;
+
+  padding-right: 25px;
+
+  align-items: center;
+}
+
+.navbarLi:hover {
+  color: rgb(70, 149, 206);
+}
+
+.navbarLi a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-flex;
+  align-items: center;
+}
+
+.navbarLi i {
+  margin-right: 8px;
+}
+*/
+/* Existing styles remain the same */
+
+/* Existing styles remain the same */
+
+/* Update these existing styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.logo {
+  flex: 0 0 15%;
+  /* width: 15%; */
+}
+
+.logo img {
+  width: 100px;
+  transform: translateX(20px) translateY(5px);
+}
+
+.navDiv {
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid white; */
+  background-color: rgb(22, 50, 60);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+}
+
+.navbar {
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.navbarUl {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-left: 90px;
+}
+
+.navbarLi {
+  text-align: center;
+  color: rgb(251, 247, 247);
+  padding-right: 25px;
+}
+
+.navbarLi:hover {
+  color: rgb(70, 149, 206);
+}
+
+.navbarLi a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-flex;
+  align-items: center;
+}
+
+.navbarLi i {
+  margin-right: 8px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+  margin-right: 30px;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(245, 249, 250);
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .navDiv {
+    display: none;
+    position: absolute;
+    top: 53px;
+    right: 0;
+    background-color: rgb(22, 50, 60);
+    height: 70vh;
+    width: 60%;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%); /* Hidden off-screen */
+  }
+  .header {
+    position: fixed;
+    background-color: rgb(22, 50, 60);
+    height: 70px;
+  }
+  .navDiv.open {
+    display: flex;
+    transform: translateX(0); /* Slide in on toggle */
+  }
+
+  .navbarUl {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbarLi {
+    padding: 15px 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+  .logo img {
+    content: url("./wingigWhite.png");
+  }
 }

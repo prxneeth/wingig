@@ -1,0 +1,240 @@
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+.h-b {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 45px;
+}
+.h-b .h {
+  width: 78%;
+  padding-left: 280px;
+}
+.h h1 {
+  font: 35px bold;
+  text-align: center;
+  text-decoration: underline;
+  padding-left: 30px;
+  transform: translateY(20px);
+}
+.h-b .b {
+  width: 20%;
+  height: auto;
+}
+.h-b .b button {
+  color: black;
+  float: right;
+  height: 70%;
+  background-color: black;
+  transform: translateX(-50px) translateY(25px);
+  color: white;
+}
+.b button:hover {
+  background-color: blue;
+  color: white;
+}
+.javaP {
+  padding-left: 50px;
+  transform: translateY(35px);
+}
+.requiredJava h3 {
+  height: 70px;
+  font: 25px bold;
+  padding-left: 150px;
+  padding-top: 30px;
+}
+.requiredJava ul {
+  height: 180px;
+  width: 700px;
+  padding-left: 180px;
+  padding-top: 20px;
+  list-style: square;
+  font-size: 18px;
+}
+.courseJava {
+  display: flex;
+  text-align: left;
+  justify-content: space-between;
+  transform: translateX(-40px) translateY(50px);
+}
+.image1Java {
+  padding: 20px;
+  border: 1px solid green;
+  height: 250px;
+  width: 400px;
+  transform: translateX(-150px);
+}
+.javapic1 {
+  height: 200px;
+  width: 300px;
+}
+.optionJava {
+  text-align: center;
+  padding-top: 10px;
+  transform: translateY(60px);
+}
+.boxJava {
+  width: 250px;
+  position: relative;
+  display: inline-block;
+}
+.boxjava .javaSelect {
+  width: 250px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 20px;
+}
+.boxJava::after {
+  font-weight: bold;
+  content: "\003E";
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.tableJava {
+  width: 95%;
+  height: 100px;
+  margin: 25px 20px;
+  text-align: center;
+  transform: translateX(10px) translateY(50px);
+}
+.tableJava th {
+  color: white;
+  background-color: #083344;
+}
+.tableJava,
+th,
+td {
+  border: 1px solid black;
+}
+.boxJava1 {
+  width: 120px;
+  position: relative;
+  display: inline-block;
+}
+.boxJava1 .javaSelect {
+  width: 125px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 20px;
+}
+.boxJava1::after {
+  font-weight: bold;
+  content: "\003E";
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.tableJava.td button {
+  color: white;
+  width: 70px;
+  height: 25px;
+  background-color: green;
+}
+.tableJava.td button:hover {
+  background-color: red;
+  color: #fff;
+}
+.javaSelect {
+  border: 0.5px solid black;
+  text-align: center;
+  border-radius: 10px;
+}
+.javaH2 {
+  text-align: center;
+  font-size: 25px;
+  text-decoration: underline;
+  padding-right: 10px;
+  padding-bottom: 30px;
+  transform: translateY(70%);
+}
+.a {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  width: 95%;
+  height: 50px;
+  margin: 10px 20px;
+  padding: 3px 10px;
+  transform: translateY(60%);
+}
+.a1 {
+  width: 250px;
+  padding-right: 10px;
+  border-right: 2px solid rgba(0, 0, 0, 0.4);
+  text-align: end;
+}
+.a2 {
+  width: 1000px;
+  padding-left: 20px;
+  padding-top: 1px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  .h-b .h {
+    padding-left: 0;
+  }
+
+  .requiredJava h3 {
+    padding-left: 20px;
+    text-align: center;
+  }
+
+  .requiredJava ul {
+    padding-left: 20px;
+  }
+
+  .boxJava {
+    width: 100%;
+  }
+
+  .tableJava {
+    transform: translateX(0);
+    font-size: 14px;
+  }
+
+  .a {
+    flex-direction: column;
+    transform: translateY(0);
+  }
+
+  .a1,
+  .a2 {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .h h1 {
+    font-size: 22px;
+  }
+
+  p {
+    padding-left: 20px;
+  }
+
+  .required h3 {
+    font-size: 18px;
+  }
+
+  .boxJava {
+    width: 100%;
+  }
+
+  .tableJava {
+    font-size: 12px;
+  }
+}

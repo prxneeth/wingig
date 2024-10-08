@@ -18,7 +18,7 @@
 .aboutinfoleft {
   width: 35%;
   background-image: url("aboutinfopic.png");
-  height: 500px;
+  /* height: 500px; */
   background-size: cover;
 }
 
@@ -51,37 +51,30 @@
 .aboutinforight p {
   padding-top: 35px;
   padding-left: 54px;
-
+  padding-bottom: 30px;
   letter-spacing: 1.6px;
 
-  line-height: 25px;
+  line-height: 30px;
   text-align: justify;
   padding-right: 54px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .aboutusfooter {
   background-image: url("aboutusfooterimg.png");
   width: 100%;
-  height: 350px;
+  min-height: 360px;
   background-size: cover;
   background-position: center;
+  margin: 0px;
+  padding: 0px;
 }
-/* .aboutusfooter iframe {
-  width: 260px;
-  height: 260px;
-  margin: 45px 600px;
-  border-radius: 10px;
-  display: none;
-} */
 
 .video-container {
   position: relative;
   width: 100%;
-  max-width: 640px;
+  /* max-width: 640px; */
   padding: 45px 580px;
-  /* border: 1px solid black; */
+
   border-radius: 15px;
 }
 
@@ -97,6 +90,7 @@
 
 .video-container p {
   width: 20%;
+
   position: absolute;
   margin: -180px 310px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -110,17 +104,15 @@
 .youtube-video {
   width: 260px;
   height: 260px;
-  display: none; /* Hidden by default */
+  display: none;
   border-radius: 15px;
-  /* margin: 0px 580px; */
-  /* padding-top: 40px; */
 }
 
 .video-cover {
   position: relative;
   width: 260px;
   height: 260px;
-  /* margin: 0px 580px; */
+
   border-radius: 15px;
   background-color: #000;
 }
@@ -188,4 +180,26 @@
 
 .play-button:hover {
   background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 768px) {
+  .aboutinfo {
+    display: flex;
+    flex-direction: column;
+  }
+  .aboutinfoleft {
+    width: 100%;
+  }
+  .aboutinforight {
+    width: 100%;
+  }
+  .video-container {
+    padding: 50px 20px;
+  }
+  .video-container p {
+    width: 200px;
+  }
+  .aboutusfooter {
+    background-image: none;
+  }
 }

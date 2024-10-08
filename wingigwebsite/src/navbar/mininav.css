@@ -46,10 +46,11 @@
 
 .insideNav input {
   border: 1px solid #fffcfc;
+
   border-radius: 19px;
   padding: 9px;
   font-size: 15px;
-  color: white;
+
   height: 35px;
 
   /* width: 90%; */
@@ -65,14 +66,14 @@
 .icon-mininav i {
   position: absolute;
   top: 50%;
-  left: 140px;
+  left: 135px;
   width: 35px;
   padding: 8px 8px;
   height: 33px;
   transform: translateY(-50%);
-  color: #999;
+  color: #faf5f5;
   border-top-right-radius: 19px;
-  background-color: rgb(28, 122, 195);
+  /* background-color: rgb(28, 122, 195); */
   border-bottom-right-radius: 19px;
 }
 

@@ -4,11 +4,13 @@ import ContactHome from "./contactHome";
 import MainDisplay from "./maindisplay";
 import Services from "./services";
 import Technologies from "./technologies";
+import MainBanner from "./mainBanner";
 
 function HomePage() {
   return (
     <div>
-      <MainDisplay />
+      {/* <MainDisplay /> */}
+      <MainBanner />
       <Technologies />
       <Services />
       <AboutUsHome />

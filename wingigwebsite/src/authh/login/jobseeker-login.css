@@ -1,0 +1,225 @@
+a {
+  text-decoration: none;
+}
+.login-screen {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-image .image {
+  max-width: 80%;
+  height: 470px;
+  float: right;
+  /* border: 2px solid red; */
+}
+
+/* .login-form{
+    width: 50%;
+    border: 2px solid greenyellow;
+    display: flex;
+    justify-content: center;
+} */
+.login-credits {
+  width: 80%;
+  min-width: 400px;
+  margin-top: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* border: 2px solid orange; */
+  border: none;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.6);
+  padding: 25px 0px;
+}
+.login-credits h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-credits #login-btns {
+  /* height: 200px; */
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid red; */
+  justify-content: center;
+}
+
+.log-fields {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  width: 360px;
+  height: 50px;
+  margin-bottom: 15px;
+  padding: 0px 10px;
+  /* position: relative; */
+}
+
+.log-fields input {
+  width: 360px;
+  height: 35px;
+  border: none;
+  margin-right: 10px;
+  color: #083344;
+  padding-left: 10px;
+}
+.log-fields input:focus {
+  outline: none;
+  border: none;
+  /* border-bottom:1px solid rgba(0, 0, 0, 0.4) ; */
+}
+/* .show-password-btn{
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    padding: 10px;
+} */
+
+.login-check-forgot {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 2px solid orange; */
+  width: 360px;
+  /* height: 15px; */
+  margin-bottom: 10px;
+  padding-top: 2px;
+}
+#log-check-fg {
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+
+  font-weight: 900;
+}
+
+#log-check-fg :hover {
+  color: #083344;
+}
+
+.login-check-forgot label,
+.login-check-forgot a {
+  text-decoration: none;
+  font-size: x-small;
+  color: rgba(0, 0, 0, 0.6);
+  padding-bottom: 3px;
+  /* border: 1px solid greenyellow; */
+}
+.login-check-forgot input[type="checkbox"] {
+  margin-top: 3px;
+  cursor: pointer;
+}
+.log-signup {
+  /* border: 2px solid red; */
+  /* width: 180px; */
+  height: 35px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px;
+}
+.log-signup button {
+  width: 250px;
+  height: 35px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  background-color: #083344;
+  color: #fff;
+  cursor: pointer;
+}
+
+.log-signup button:hover {
+  color: #083344;
+  background-color: #fff;
+  transition: background 0.5s ease;
+}
+#text-or {
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 0.05;
+  font-size: medium;
+  padding: 11px;
+  margin-bottom: 4px;
+}
+.sign-google {
+  margin-bottom: 20px;
+  /* border: 2px solid red; */
+}
+.sign-google a {
+  height: 35px;
+  width: 250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  background-color: #083344;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+.sign-google a .sign-img {
+  /* padding-top: 3px;
+  padding-right: 3px; */
+  margin-right: 10px;
+  /* width: 20px;
+    height: 20px; */
+}
+.sign-google a:hover {
+  color: #083344;
+  background-color: #fff;
+  transition: background 0.5s ease;
+}
+
+/* Styles for Mobile Devices */
+@media (max-width: 640px) {
+  .login-image {
+    display: none;
+  }
+  .login-credits {
+    width: 45%;
+  }
+
+  #login-btns {
+    flex-direction: row;
+  }
+
+  #login-btns button {
+    width: 80%;
+    /* margin-bottom: 10px; */
+  }
+}
+
+/* Styles for Tablets and Laptops */
+@media (min-width: 768px) {
+  .login-screen {
+    flex-direction: row;
+    padding: 40px;
+  }
+
+  .login-image {
+    flex: 1;
+    margin-right: 40px;
+  }
+
+  .login-form {
+    flex: 1;
+    margin-top: 0;
+  }
+
+  #login-btns {
+    justify-content: center;
+  }
+
+  #login-btns button {
+    width: 180px;
+    /* margin: 0 10px; */
+  }
+}

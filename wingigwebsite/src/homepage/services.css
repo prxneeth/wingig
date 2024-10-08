@@ -1,24 +1,21 @@
 .homeService {
   background-color: rgb(22, 50, 66);
-  height: 600px;
+  height: auto;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .leftService {
   background-image: url("servicerightimg.png");
-
   background-repeat: no-repeat;
-  width: 25%;
   background-size: cover;
+  width: 25%;
+  min-height: 600px;
 }
 
-.leftService image {
-  width: 100px;
-}
 .leftService p {
   color: #5eb0f4;
-
   padding-top: 30px;
   padding-right: 9px;
   font-size: 38px;
@@ -26,114 +23,97 @@
   font-weight: 700;
 }
 
-.leftService img {
-  width: 100px;
-}
 .serviceSpan1 {
   font-size: 34px;
 }
+
 .serviceSpan2 {
   color: white;
 }
 
 .rightSService {
   width: 75%;
+  display: flex;
+  flex-direction: column;
 }
+
 .rightServiceTop {
-  height: 38%;
   padding-top: 40px;
-  padding-bottom: 20px;
   padding-left: 20px;
+  padding-right: 20px;
 }
 
 .rightServiceTop p {
   border: 1px solid rgb(182, 173, 173);
   padding: 11px;
   margin: 15px;
-  line-height: 28px;
   font-size: 16px;
-
+  line-height: 28px;
   background: linear-gradient(to top, rgb(20, 56, 99), rgb(68, 137, 171));
   border-radius: 8px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-  font-family: Arial, sans-serif;
   color: white;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
+
 .rightServiceDown {
-  height: 60%;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  display: flex;
-  gap: 10px;
   padding: 40px;
-}
-
-.servicesHome {
-  background-color: rgb(187, 216, 239);
-  height: 550px;
-  display: flex;
-  flex-direction: column;
-}
-
-.servicesTop {
-  height: 40%;
-  display: flex;
-
-  padding: 60px 72px;
-}
-
-.servicesTopLeft {
-  color: #0d3251;
-
-  font-size: 35px;
-  font-weight: 700;
-  width: 50%;
-}
-
-.servicesTopLeft span {
-  color: rgb(104, 194, 229);
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-}
-
-/* .styledHr {
-  width: 20%;
-  height: 3px;
-  margin: 10px 0px;
-  background-color: #0d3251;
-  border-radius: 10px;
-} */
-
-.servicesTopRight {
-  width: 60%;
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-  color: rgb(9, 31, 100);
-  word-spacing: 3px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.servicesBottom {
-  height: 60%;
-  padding: 20px 50px;
-
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1px;
+  gap: 10px;
 }
 
 .serviceBox {
-  position: relative;
   background-color: white;
-  border-radius: 12px;
+  border-radius: 10px;
   width: 210px;
-  height: 250px;
-
-  margin-left: 11px;
+  height: 280px;
+  position: relative;
   text-align: center;
   transition: transform 0.3s ease;
-  overflow: hidden;
+}
+
+.serviceBox img {
+  width: 100%;
+  height: auto;
+}
+
+.serviceBoxText {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  border-radius: 10px;
+
+  height: 45px;
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+}
+
+.hoverText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  color: white;
+  font-size: 12px;
+  width: 80%;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.serviceBox:hover .hoverText {
+  opacity: 1;
+}
+
+.serviceBox:hover {
+  transform: scale(1.1);
 }
 
 .serviceBox::before {
@@ -150,7 +130,8 @@
 }
 .serviceBox:hover::before {
   opacity: 1;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(3px);
+  border-radius: 10px;
 }
 .serviceBox:hover {
   transform: translateY(-4px);
@@ -161,52 +142,92 @@
   opacity: 0;
 }
 
-/* .serviceBox:hover {
-    background-color: rgba(168, 99, 84, 0.8);
+/* @media (max-width: 1024px) {
+  .homeService {
+    flex-direction: column;
+    height: auto;
+    width: fit-content;
+  }
+
+  .leftService {
+    width: 100%;
+    min-height: 400px;
+  }
+
+  .rightSService {
+    width: 100%;
+  }
+
+  .rightServiceDown {
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .serviceBox {
+    width: 180px;
+    height: 230px;
+  }
+} */
+
+@media (max-width: 768px) {
+  .homeService {
+    flex-direction: column;
+    /* height: 500px; */
+    width: fit-content;
+  }
+
+  .leftService p {
+    font-size: 39px;
+    text-align: center;
+  }
+  .serviceSpan1 {
+    font-size: 37px;
+  }
+
+  .serviceSpan2 {
     color: white;
-  } */
+  }
+  .leftService {
+    background-image: none;
+    width: 100%;
+    min-height: 130px;
+  }
 
-.serviceBox img {
-  width: 210px;
+  .rightSService {
+    width: 100%;
+  }
+  .rightServiceTop p {
+    font-size: 13px;
+    line-height: 18px;
+  }
+  .rightServiceDown {
+    justify-content: center;
+    padding: 20px;
+    min-height: 280px;
+  }
 
-  /* object-fit: cover; */
+  .serviceBox {
+    width: 150px;
+    height: 190px;
+  }
+  .serviceBox p {
+    font-size: 10px;
+  }
+  .serviceBoxText i {
+    display: none;
+  }
+  .serviceBoxText {
+    font-size: 12px;
+    padding-right: 15px;
+  }
+  .hoverText {
+    font-size: 10px;
+    margin-top: 13px;
+  }
 }
 
-.serviceBoxText {
-  position: absolute;
-  width: 210px;
-  bottom: 0px;
-  height: 45px;
-  font-size: 15px;
-  font-weight: 700;
-  display: flex;
-
-  justify-content: center;
-  color: rgb(253, 254, 255);
-}
-.hoverText {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -55%);
-  color: white;
-  font-size: 12px;
-  width: 147px;
-
-  font-weight: 600;
-  /* text-align: justify; */
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 2;
-}
-
-.serviceBox:hover .hoverText {
-  opacity: 1;
-}
-
-.serviceBoxText i {
-  /* padding: 18px; */
-
-  padding-right: 10px;
+@media (max-width: 468px) {
+  .rightServiceDown {
+    min-height: 380px;
+  }
 }

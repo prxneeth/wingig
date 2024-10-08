@@ -1,0 +1,192 @@
+.userPmain {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(244, 247, 249);
+  border-radius: 10px;
+  width: 80%;
+  height: 180px;
+  margin-left: 115px;
+  margin-top: 20px;
+  box-shadow: 1px;
+  box-shadow: 0 8px 8px rgba(11, 0, 0, 0.3);
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.profileBar {
+  width: 15%;
+}
+.userDetails {
+  width: 35%;
+}
+
+.userpfphr {
+  background-color: black;
+  border: none;
+  border: 1px solid rgb(181, 177, 177);
+  width: 100%;
+  margin-top: 5px;
+  border-radius: 10px;
+}
+
+.useritems {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 3 equal columns */
+  grid-template-rows: repeat(3, auto); /* 2 rows */
+  gap: 10px; /* Space between grid items */
+  list-style-type: none; /* Remove default list styling */
+  padding: 0px; /* Remove default padding */
+  margin: 13px 0px; /* Remove default margin */
+}
+.otherDetails {
+  width: 35%;
+  background-color: rgb(238, 241, 245);
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.otherDetailsLi {
+  list-style-type: none;
+  gap: 10px;
+  line-height: 30px;
+}
+.otherDetails button {
+  border-radius: 5px;
+  width: 150px;
+  height: 25px;
+  margin-top: 5px;
+
+  border: none;
+  color: rgb(12, 14, 17);
+  background-color: rgb(225, 228, 232);
+}
+
+.userpfLinks {
+  background-color: rgb(244, 247, 249);
+  width: 20%;
+  height: 350px;
+  margin-top: 25px;
+  margin-left: 115px;
+  border-radius: 10px;
+  box-shadow: 1px;
+  box-shadow: 0 8px 8px rgba(11, 0, 0, 0.3);
+}
+
+.userpfLinks h3 {
+  font-weight: 100;
+  padding: 20px;
+  padding-top: 30px;
+}
+
+.userpfLinksLi {
+  font-weight: ultralight;
+  list-style-type: none;
+  margin: -10px 30px;
+  line-height: 25px;
+}
+
+.userpfDiv {
+  display: flex;
+  width: 100%;
+}
+
+.userDetailsForm {
+  width: 85%;
+
+  margin-top: 25px;
+  margin-left: 30px;
+}
+/* .resumeUpload {
+  background-color: rgb(244, 247, 249);
+  width: 770px;
+  height: 200px;
+  margin-top: 25px;
+  margin-left: 30px;
+  border-radius: 10px;
+  box-shadow: 1px;
+  box-shadow: 0 8px 8px rgba(11, 0, 0, 0.3);
+} */
+.profile-form {
+  width: 85%;
+  right: 20px;
+}
+
+.section {
+  background-color: #f8f9fa;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.section h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.section p {
+  color: #888;
+}
+.addDetailsButton {
+  float: right;
+  transform: translateX(0px) translateY(-15px);
+  color: #0c5baf !important;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 500px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content form textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 100px;
+}
+
+.modal-content form button {
+  margin-right: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-content form button[type="button"] {
+  background-color: #ccc;
+}
+
+.modal-content form button:hover {
+  background-color: #0056b3;
+}
