@@ -9,7 +9,6 @@ const JobPortal = () => {
     const [filteredPostings, setFilteredPostings] = useState([]);
     const [applyModal, setApplyModal] = useState(false);
 
-    // Temporary states for input fields
     const [tempJobField, setTempJobField] = useState('select');
     const [tempLocation, setTempLocation] = useState('select');
 
@@ -18,7 +17,7 @@ const JobPortal = () => {
             try {
                 const response = await axios.get('/jobsData.json');
                 setJobPostings(response.data);
-                setFilteredPostings(response.data); // Initially show all jobs
+                setFilteredPostings(response.data);
             } catch (error) {
                 console.error('Error fetching job postings:', error);
             }
@@ -28,24 +27,24 @@ const JobPortal = () => {
     }, []);
 
     const handleSearch = () => {
-        // Update actual states when Search button is clicked
+
         setJobField(tempJobField);
         setLocation(tempLocation);
 
-        // Start with all job postings
+
         let filtered = jobPostings;
 
-        // Filter by jobField if it's selected
+
         if (tempJobField && tempJobField !== 'select') {
             filtered = filtered.filter((job) => job.title.includes(tempJobField));
         }
 
-        // Filter by location if it's selected
+
         if (tempLocation && tempLocation !== 'select') {
             filtered = filtered.filter((job) => job.location.includes(tempLocation));
         }
 
-        // Set the filtered postings with updated results
+
         setFilteredPostings(filtered);
     };
 
