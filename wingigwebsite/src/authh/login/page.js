@@ -19,7 +19,7 @@ export default function Login() {
         setError('');
 
         try {
-            const response = await axios.post('http://localhost:1337/api/registrations', {
+            const response = await axios.post('http://localhost:1337/api/auth/local', {
                 identifier: email,
                 password: password
             });
@@ -27,7 +27,6 @@ export default function Login() {
             console.log('Login response:', response.data);
 
             if (response.data.jwt) {
-
                 localStorage.setItem('token', response.data.jwt);
                 navigate('/');
             } else {
